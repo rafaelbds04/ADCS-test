@@ -1,0 +1,20 @@
+#include "Arduino.h"
+#include "System.h"
+#include "Sensors.h"
+#include "Motor.h"
+
+System sys;
+Sensors sensors;
+// Motor motor;
+
+void setup() {
+  sys.init();
+  sensors.initAllSensors();
+  // motor.init();
+}
+
+void loop() {
+  sensors.acquireBNOData();
+  // sensors.acquireBNOData();
+
+}
